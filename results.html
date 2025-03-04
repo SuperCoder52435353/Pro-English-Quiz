@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umumiy Natijalar (Admin)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="results-page">
+        <h1 class="animate-title">Umumiy Natijalar (FAQAT ADMIN UCHUN)</h1>
+        
+        <!-- Online Foydalanuvchilar Bo‘limi -->
+        <div class="admin-section">
+            <h2>Online Foydalanuvchilar</h2>
+            <div id="onlineUsers" class="online-users"></div>
+        </div>
+
+        <!-- Umumiy Natijalar Jadvali -->
+        <div class="admin-section">
+            <h2>Barcha Natijalar</h2>
+            <div class="results-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Foydalanuvchi</th>
+                            <th>Daraja</th>
+                            <th>Natija</th>
+                            <th>Ball</th>
+                            <th>Sana</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="allResults"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Admin Nazorat Tugmalari -->
+        <div class="admin-controls">
+            <button onclick="clearAllResults()" class="admin-btn">Barcha Natijalarni Tozalash</button>
+            <button onclick="generateReport()" class="admin-btn">Hisobot Tayyorlash</button>
+            <button onclick="filterResultsByUser()" class="admin-btn">Foydalanuvchi bo‘yicha Filtrlash</button>
+            <button onclick="sortResultsByScore()" class="admin-btn">Ball bo‘yicha Saralash</button>
+            <button onclick="restrictUser()" class="admin-btn">Foydalanuvchi Cheklash</button>
+            <button onclick="viewUserStats()" class="admin-btn">Foydalanuvchi Statistikasi</button>
+            <button onclick="updateQuizSettings()" class="admin-btn">Test Sozlamalarini O‘zgartirish</button>
+            <button onclick="clearOnlineUsers()" class="admin-btn">Online Foydalanuvchilarni Tozalash</button>
+        </div>
+        <button onclick="goBack()" class="back-btn">Orqaga qaytish</button>
+    </div>
+    <div class="footer">
+        Made with Abduraxmon
+    </div>
+    <script src="script.js"></script>
+    <script>
+        displayAllResults();
+        updateOnlineUsers();
+    </script>
+</body>
+</html>
